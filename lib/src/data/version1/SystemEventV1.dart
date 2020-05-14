@@ -11,10 +11,13 @@ class SystemEventV1 implements IStringIdentifiable
 	int severity;
 	String message;
 	StringValueMap details;
+ 
+ /// TODO: Replace constructor on SystemEventV1({String id, DateTime time, etc. })
+	SystemEventV1(); 
+  //// remove this
+	SystemEventV1.from(this.id, this.time, this.correlation_id, this.source, this.type, this.severity, this.message, this.details);///
 
-	SystemEventV1();
-
-	SystemEventV1.from(this.id, this.time, this.correlation_id, this.source, this.type, this.severity, this.message, this.details);
+  /// Add factory for construct from JSON
 
 	void fromJson(Map<String, dynamic> json)
 	{

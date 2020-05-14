@@ -12,6 +12,8 @@ class EventLogMemoryPersistence
     maxPageSize = 1000;
   }
 
+  //TODO: Add comments and document code
+
   @override
   Future<DataPage<SystemEventV1>> getPageByFilter(
       String correlationId, FilterParams filter, PagingParams paging) async {
